@@ -1,5 +1,6 @@
 import useCityName from "./useCityName";
 import useWeather from "./useWeather";
+import logo from "./assets/logo.svg";
 
 function App() {
   const [city] = useCityName();
@@ -18,7 +19,7 @@ function App() {
     return (
       <div className="unloaded">
         <div className="logo">
-          <img src="/src/assets/logo.svg" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </div>
         <p>Looking for your city, please wait...</p>
       </div>
@@ -29,7 +30,7 @@ function App() {
     return (
       <div className="loading">
         <div className="logo">
-          <img src="/src/assets/logo.svg" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </div>
         <p>Loading...</p>
       </div>
@@ -39,7 +40,7 @@ function App() {
     return (
       <div className="error">
         <div className="logo">
-          <img src="/src/assets/logo.svg" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </div>
         <p>
           We&lsquo;re sorry! Something went wrong while searching for your city.
@@ -54,7 +55,7 @@ function App() {
       {/* Main Card */}
       <div className="main-card">
         <div className="logo">
-          <img src="/src/assets/logo.svg" alt="Logo" />
+          <img src={logo} alt="logo" />
         </div>
         <div className="weather-details">
           <span className="temp">{temp}&deg;</span>
